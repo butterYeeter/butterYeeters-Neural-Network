@@ -7,7 +7,7 @@ public class Main {
 		
 		l1.forward(l1.weights, inputs);
 		//l2.forward(l2.weights, l1.output);
-		
+		//Test
 		for(int i = 0; i < 1; i++)
 		{
 			for(int j = 0; j < l1.output[0].length; j++)
