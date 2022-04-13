@@ -11,7 +11,7 @@ public class Dense {
 		{
 			for(int j = 0; j < neurons; j++)
 			{
-				weights[i][j] = Math.random();
+				weights[i][j] = -(double)(0.1 * Math.random());
 			}
 		}
 		
@@ -19,12 +19,12 @@ public class Dense {
 		{
 			for(int j = 0; j < neurons; j++)
 			{
-				biases[i][j] = 2;
+				biases[i][j] = 0;
 			}
 		}
 	}
 	
-	public void forward(double[][] weights, double[][] inputs)
+	public void forward(double[][] inputs, double[][] weights)
 	{
 		double[][] o = new double[inputs.length][weights[0].length];
 		for(int i = 0; i < inputs.length; i++)
