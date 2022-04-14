@@ -43,8 +43,7 @@ private double[][] outReLU, outSoftMax;
         {
             for(int j = 0; j < in[0].length; j++)
             {
-                in[i][j] =              1 /
-                            1 + Math.pow(Math.E, in[i][j]);
+                in[i][j] =  in[i][j] / sum;
             }
         }
         this.outSoftMax = in;

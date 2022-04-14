@@ -11,7 +11,7 @@ public class Dense {
 		{
 			for(int j = 0; j < neurons; j++)
 			{
-				weights[i][j] = -(double)(0.1 * Math.random());
+				weights[i][j] = (Math.random());
 			}
 		}
 		
