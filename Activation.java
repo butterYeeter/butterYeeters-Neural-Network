@@ -1,3 +1,4 @@
+
 public class Activation {
 private double[][] outReLU, outSoftMax;
 
@@ -19,10 +20,7 @@ private double[][] outReLU, outSoftMax;
         {
             for(int j = 0; j < in[0].length; j++)
             {
-                if(in[i][j] < 0)
-                {
-                    in[i][j] = 0;
-                }
+                Math.max(0, in[i][j]);
             }
         }
         this.outReLU = in;
@@ -43,8 +41,7 @@ private double[][] outReLU, outSoftMax;
         {
             for(int j = 0; j < in[0].length; j++)
             {
-                in[i][j] =              1 /
-                            1 + Math.pow(Math.E, in[i][j]);
+                in[i][j] =  in[i][j] / sum;
             }
         }
         this.outSoftMax = in;
